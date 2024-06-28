@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function showDate() {
+            var currentDate = new Date();
+            var date = currentDate.getDate() + "/"
+                        + currentDate.toLocaleString('default', { month: 'long' }) + "/"
+                        + currentDate.getFullYear();
+            document.getElementById("dateDisplay").innerText = date;
+        }
+
+        function showTime() {
+            var currentTime = new Date();
+            var options = {
+                timeZone: 'Asia/Kolkata',
+                hour12: false,
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZoneName: 'long'
+            };
+            var time = currentTime.toLocaleString('en-US', options);
+            document.getElementById("timeDisplay").innerText = time;
+        }
+    </script>
+</head>
+<body>
+
+    <button onclick="showDate()">show date</button>
+    <p id="dateDisplay">7/March/2023</p>
+
+    <button onclick="showTime()">show Time</button>
+    <p id="timeDisplay">Tue Mar 07 2023 23:24:26 GMT+0530 (India Standard Time)</p>
+
+</body>
+</html>

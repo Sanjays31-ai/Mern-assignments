@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        td {
+            padding-bottom: 10px;
+        }
+        .border {
+            background-color: rgba(19, 124, 181, 0.818);
+            width: 700px;
+            padding-top: 20px;
+            margin: auto;
+        }
+        .button {
+            background-color: red;
+            color: bisque;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+        .validation {
+            color: red;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="border">
+        <h2 align="center">Registration Form</h2>
+        <center>
+            <form id="registrationForm" onsubmit="return validateForm()">
+                <table>
+                    <tr>
+                        <td><label for="fname">First Name:</label></td>
+                        <td>
+                            <input type="text" id="fname" name="fname" size="50">
+                            <span id="fnameError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name:</label></td>
+                        <td>
+                            <input type="text" id="lname" name="lname" size="50">
+                            <span id="lnameError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td>
+                            <input type="email" id="email" name="email" size="50">
+                            <span id="emailError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td>
+                            <input type="password" id="password" name="password" size="50">
+                            <span id="passwordError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="repassword">Re-enter Password:</label></td>
+                        <td>
+                            <input type="password" id="repassword" name="repassword" size="50">
+                            <span id="repasswordError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Gender:</label></td>
+                        <td>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <br>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                            <span id="genderError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Age:</label></td>
+                        <td>
+                            <input type="number" id="age" name="age" size="20">
+                            <span id="ageError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone Number:</label></td>
+                        <td>
+                            <input type="tel" id="phone" name="phone" size="50">
+                            <span id="phoneError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address:</label></td>
+                        <td>
+                            <textarea id="address" name="address" cols="47" rows="6"></textarea>
+                            <span id="addressError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State:</label></td>
+                        <td>
+                            <input type="text" id="state" name="state" size="50">
+                            <span id="stateError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country:</label></td>
+                        <td>
+                            <select id="country" name="country">
+                                <option value="Choose">Choose your country</option>
+                                <option value="india">India</option>
+                                <option value="usa">USA</option>
+                                <option value="uk">UK</option>
+                            </select>
+                            <span id="countryError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Languages Known:</label></td>
+                        <td>
+                            <input type="checkbox" id="english" name="languages" value="english">
+                            <label for="english">English</label>
+                            <input type="checkbox" id="kannada" name="languages" value="kannada">
+                            <label for="kannada">Kannada</label>
+                            <input type="checkbox" id="hindi" name="languages" value="hindi">
+                            <label for="hindi">Hindi</label>
+                            <input type="checkbox" id="telugu" name="languages" value="telugu">
+                            <label for="telugu">Telugu</label>
+                            <span id="languagesError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox" id="declaration" name="declaration" checked>
+                            <label for="declaration">I hereby declare that all the given details are true</label>
+                            <span id="declarationError" class="validation"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p align="right">log in to <a href="">Ethnus</a> website</p>
+                        </td>
+                    </tr>
+                </table>
+                <center>
+                    <input type="submit" value="Register" align="center" class="button">
+                </center>
+            </form>
+        </center>
+    </div>
+    <script src="task8.js"></script>
+</body>
+</html>
